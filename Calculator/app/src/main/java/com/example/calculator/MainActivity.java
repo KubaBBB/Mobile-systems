@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,12 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-//
-//        ConfigureButtons(savedInstanceState);
-//    }
-//
-//    protected void ConfigureButtons(Bundle savedInstanceState) {
-        //add btn
+
         Button addBtn = (Button) findViewById(R.id.addButton);
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +79,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mBound)
                     performCalculation(Operation.Divide);
+            }
+        });
+
+        Button piBtn = (Button) findViewById(R.id.piButton);
+        piBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+                progressBar.setProgress(0);
+                new PiComputeTask((EditText) findViewById(R.id.resEditText),
+                        (ProgressBar) findViewById(R.id.progressBar))
+                        .execute();
             }
         });
     }
