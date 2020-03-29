@@ -1,0 +1,5 @@
+youtube:
+https://www.youtube.com/watch?v=XlSgoH1gVwA
+
+github:
+https://github.com/KubaBBB/Mobile-systems/tree/develop/Calculator
