@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
                 progressBar.setProgress(0);
-                new PiComputeTask((EditText) findViewById(R.id.resEditText),
+                new PiComputeTask((EditText) findViewById(R.id.n1EditText),
                         (ProgressBar) findViewById(R.id.progressBar))
                         .execute();
             }

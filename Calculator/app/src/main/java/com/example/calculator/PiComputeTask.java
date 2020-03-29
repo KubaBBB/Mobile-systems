@@ -14,16 +14,21 @@ public class PiComputeTask extends AsyncTask<Void, Integer, Double> {
     }
 
     protected Double doInBackground(Void... voids) {
-        double pi = 1330.0;
-        int max = 1000000;
-        for (int i = 0; i < m; i++) {
-            try {
-                Thread.sleep(1000);
-                publishProgress();
-            } catch (InterruptedException e) {
-                // We were cancelled; stop sleeping!
-            }
+        double pi;
+        int max = 22222222;
+        progressBar.setMax(max);
+        int points = 0;
+        double x, y;
+        for (int i = 1; i <= max; i++) {
+            if( i % 1000 == 0)
+                publishProgress(i);
+            x = Math.random();
+            y = Math.random();
+            if (Math.hypot(x, y) <= 1)
+                points++;
         }
+        pi = 4 * (float) points / max;
+
         return pi;
     }
 
@@ -37,4 +42,3 @@ public class PiComputeTask extends AsyncTask<Void, Integer, Double> {
         progressBar.setProgress(values[0]);
     }
 }
-
