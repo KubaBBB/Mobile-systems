@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
-    public static String IP = "IP";
+    public static String BROKER = "IP";
     public static String NICK = "nick";
 
     private Button startBtn;
@@ -29,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SimpleChatActivity.class);
-                intent.putExtra(IP, serverEditText.getText().toString());
+                Intent intent = new Intent(getBaseContext(), ChatRoomActivity.class);
+                intent.putExtra(BROKER, serverEditText.getText().toString());
                 intent.putExtra(NICK, nickNameEditText.getText().toString());
                 startActivity(intent);
             }
         });
-
     }
 }
