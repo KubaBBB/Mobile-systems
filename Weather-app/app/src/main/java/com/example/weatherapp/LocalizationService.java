@@ -2,11 +2,11 @@ package com.example.weatherapp;
 
 import android.app.Service;
 import android.content.Intent;
-import android.content.Context;
 import android.location.Location;
-import android.location.LocationListener;
 import android.os.Binder;
+import android.os.Bundle;
 import android.os.IBinder;
+import android.os.Message;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -22,6 +22,10 @@ public class LocalizationService extends Service {
 
     private final IBinder mBinder = new LocalBinder();
 
+    public LocalizationService(MainActivity.MyHandler handler) {
+        this.handler = handler;
+    }
+
     public class LocalBinder extends Binder {
         LocalizationService getService() {
             // Return this instance of LocalService so clients can call public methods
@@ -35,6 +39,7 @@ public class LocalizationService extends Service {
         return null;
     }
 
+    private final MainActivity.MyHandler handler;
     private final String appid = "4526d487f12ef78b82b7a7d113faea64";
     public static String OPENWEATHER_WEATHER_QUERY = "http://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&mode=html&appid=4526d487f12ef78b82b7a7d113faea64";
     // usage String.format(OPENWEATHER_WEATHER_QUERY, lat,lon)
@@ -79,7 +84,13 @@ public class LocalizationService extends Service {
     }
 
     private void updateWeather(double lat, double lon) {
-
+        String weather = getContentFromUrl(OPENWEATHER_WEATHER_QUERY );
+        Message m = handler.obtainMessage();
+        Bundle b = new Bundle();
+        b.putString("lat", String.valueOf(lat));
+        b.putString("lon", String.valueOf(lon));
+        b.putString("web", weather);
+        m.setData(b);
     }
 
     ;
