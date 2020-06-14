@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Hello_World.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Editor xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Name="editorLabel"
+                ClassId="editorLabel" Placeholder="" PlaceholderColor="Olive" />
+        <Button Text="Kliknij" Clicked="ShowDialog"></Button>
+        <Button Text="Przejdz do nowej karty" Clicked="RunHowManyFingers_OnClicked"></Button>
+        <Button Text="Otworz kalkulator BMI" Clicked="BMICalculator_OnClicked"></Button>
+    </StackLayout>
+
+</ContentPage>

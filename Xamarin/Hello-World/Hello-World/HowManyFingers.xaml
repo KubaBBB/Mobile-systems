@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Hello_World.HowManyFingers">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Tutaj pokaze wynik gry"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="Result"/>
+            <Label Text="Wpisz ponizej liczbe od 1 do 10 ktore uwazasz ze wylosowałem"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="Instruction"/>
+            <Editor xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="EditorLabel"
+                Placeholder="" PlaceholderColor="Olive" Text="Tutaj wpisz liczbe" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" x:Name="CubeImg1"
+                   IsVisible="False"                   />
+                <Image Grid.Row="0" Grid.Column="1" x:Name="CubeImg2"
+                   IsVisible="False"/>
+            </Grid>
+            <Button Text="Sprawdz" Clicked="CheckResults_OnClicked"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

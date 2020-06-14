@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_App.AddFlowerPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Modify flower property"></Label>
+            <Editor xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Name="editorName"
+                ClassId="editorName" Placeholder="" PlaceholderColor="Olive" />
+            <Editor xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Name="editorUrl"
+                ClassId="editorUrl" Placeholder="" PlaceholderColor="Olive" />
+            <Button Text="Modify Flower" Clicked="AddFlower_OnClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

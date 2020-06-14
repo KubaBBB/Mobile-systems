@@ -1,0 +1,15 @@
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\bin\Debug\netstandard2.0\Xamarin-App.deps.json
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\bin\Debug\netstandard2.0\Xamarin-App.dll
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\bin\Debug\netstandard2.0\ref\Xamarin-App.dll
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\bin\Debug\netstandard2.0\Xamarin-App.pdb
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\Xamarin-App.csprojAssemblyReference.cache
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\AddFlowerPage.xaml.g.cs
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\Xamarin-App.AssemblyInfoInputs.cache
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\Xamarin-App.AssemblyInfo.cs
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\Xamarin-App.dll
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\ref\Xamarin-App.dll
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\Xamarin-App.pdb
+C:\Users\jakbol\source\repos\Mobile-systems\Xamarin-App\Xamarin-App\Xamarin-App\obj\Debug\netstandard2.0\WeatherPage.xaml.g.cs

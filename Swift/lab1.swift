@@ -123,7 +123,7 @@ repeat {
         }
     }
     
-    print("Selected numbers -> num1: \(n1), num2: \(n2)")
+    //print("Selected numbers -> num1: \(n1), num2: \(n2)")
     //guard let g1 = n1, let g2 = n2 else { continue }
 
     let chosenOpt:String
@@ -217,7 +217,7 @@ func Pyramid(n: Int) -> String{
        }
         pattern += "\n"
    }
-   print(pattern)
+   //print(pattern)
    return pattern
 }
 
@@ -227,7 +227,7 @@ var pyramid = Pyramid(n:4);
 
 let str = "Hello my friend"
 let RevRes = String(str.reversed()) // This will give you cba
-print("Reversed: \(RevRes)")
+//print("Reversed: \(RevRes)")
 
 
 // 3.1 Tables unique names
@@ -235,6 +235,170 @@ print("Reversed: \(RevRes)")
 let names = ["Krzysiek", "Miroslaw", "Jakub", "Jakub"]
 print(Set(names))
 
+class Animal : CustomStringConvertible {
+    var name: String
+    var age: Int
+    var species: String
+    
+    init(name: String, age: Int, species: String) {
+        self.name = name
+        self.age = age
+        self.species = species
+    }
+    
+    func move() {
+        print("\(name): I'm moving.")
+    }
+    
+    var description: String {
+    return "Hello. Im: \(species). My name is:\(name). I am:\(age) years old."
+  }
+}
+
+var a = Animal(name: "Puffy", age: 7, species: "dog")
+print(a)
+a.move()
+
+class Fish :Animal {
+    override func move(){
+        print("\(name): Im swimming")
+    }
+}
+
+class Dog :Animal {
+    override func move(){
+        print("\(name): Im running")
+    }
+}
+
+var f = Fish(name: "Rick", age:2, species:"Fish")
+print(f)
+f.move()
+var d = Dog(name: "Morty", age:3, species:"Dog")
+print(d)
+d.move()
 
 
 
+var fAnimal:Animal = Fish(name: "Sully", age:21, species:"fAnimal")
+fAnimal.move()
+
+
+func PrintUpperIdx(nameList:[String]) -> Void {
+    var idx = 0
+    for name in nameList {
+        var isUpper = true
+        var arr = Array(name)
+        for i in 0..<arr.count {
+            if arr[i].isLowercase{
+                isUpper = false
+            }
+        }   
+        if isUpper {
+            print("name:\(name), at index: \(idx)")
+        }
+        idx += 1
+    }
+}
+let names2 = ["Monika","Monika", "MONIKA", "Andrzej", "Monika", "STEFAN", "Andrzej", "JUREK", "KAMIL"]
+PrintUpperIdx(nameList:names2)
+
+
+func occurences(arr:[String]) -> Void{
+    var strDict: [String: Int] = [:]
+    for item in arr{
+    let keyExists = strDict[item] != nil;
+        if keyExists {
+            strDict[item]! += 1
+        }
+        else
+        {
+            strDict[item] = 1
+
+        }
+    }
+    
+    print(strDict)
+}
+
+let names3 = ["Monika","Monika", "MONIKA", "Andrzej", "Monika", "STEFAN", "Andrzej", "JUREK", "KAMIL"]
+occurences(arr:names3)
+
+
+enum Choices {
+    case rock
+    case paper
+    case scissors
+}
+
+enum Result{
+    case win
+    case lost
+    case draw
+}
+
+func game(p1:Choices, p2:Choices) -> Result{
+    switch p1{
+        case .rock:
+            switch p2 {
+                    case .rock:
+                        return Result.draw
+                    case .paper:
+                        return Result.lost
+                    case .scissors:
+                        return Result.win
+                        
+                }
+        case .paper:
+            switch p2 {
+                    case .rock:
+                        return Result.win
+                    case .paper:
+                        return Result.draw
+                    case .scissors:
+                        return Result.lost
+                }            
+        case .scissors:
+            switch p2 {
+                    case .rock:
+                        return Result.lost
+                    case .paper:
+                        return Result.win
+                    case .scissors:
+                        return Result.draw
+                }
+            
+    }
+    return Result.draw
+}
+
+
+let p1:Choices = Choices.rock
+let p2:Choices = Choices.rock
+let resGame = game(p1:p1, p2:p2)
+print("(\(p1), \(p2), \(resGame))")
+
+
+func factorial(of num: Int) -> Int {
+    if num == 1 {
+        return 1
+    } else {
+        return num * factorial(of:num - 1)
+    }
+}
+
+let x = 4
+let result = factorial(of: x)
+print("The factorial of \(x) is \(result)")
+
+
+func fibs(n: Int) -> Int {
+    
+    if n == 0 {
+        return 0
+    } else if n == 1{
+        return 1
+    }
+    
+    return fibs(n - 1) + fibs(n - 2)
+}
